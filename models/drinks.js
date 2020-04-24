@@ -1,7 +1,7 @@
 
 module.exports = function(sequelize, DataTypes) {
   var drink = sequelize.define("drink", {
-    // The email cannot be null, and must be a proper email before creation
+  
     cocktailName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,10 +31,11 @@ module.exports = function(sequelize, DataTypes) {
     }, 
     ingFourOz: {
       type: DataTypes.STRING
-    },
+    }},
+    {
     freezeTableName: true 
-    
-  });
+    },
+  );
  
  
   return drink;
