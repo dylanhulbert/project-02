@@ -31,6 +31,9 @@ module.exports = function(sequelize, DataTypes) {
     }, 
     ingFourOz: {
       type: DataTypes.STRING
+    }, 
+    drinkNotes: {
+      type: DataTypes.STRING
     }},
     {
     freezeTableName: true 
