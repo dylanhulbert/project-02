@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var addDrinkForm = $("form.addDrink");
-    var cocktailName = $("input#cocktailName-input")
+    var drinkName = $("input#drinkName-input")
     var ingOneInput = $("input#ingOne-input");
     var ingOneOzInput = $("input#ingOneOz-input");
     var ingTwoInput = $("input#ingTwo-input");
@@ -16,7 +16,7 @@ $(document).ready(function(){
 addDrinkForm.on("submit", function(event){
 event.preventDefault(); 
 var newDrink = {
-    cocktailName: cocktailName.val().trim(), 
+    drinkName: drinkName.val().trim(), 
     ingOne: ingOneInput.val().trim(), 
     ingOneOz: ingOneOzInput.val().trim(), 
     ingTwo: ingTwoInput.val().trim(), 
@@ -28,7 +28,7 @@ var newDrink = {
     drinkNotes: notesInput.val().trim()
 }; 
 createDrink(newDrink); 
-    cocktailName.val("")
+    drinkName.val("")
     ingOneInput.val("");  
     ingOneOzInput.val("");  
     ingTwoInput.val("");  
@@ -41,7 +41,7 @@ createDrink(newDrink);
 });
 
 function createDrink(newDrink){
-    $.post("/api/addDrinks", {
+    $.post("/api/drinks", {
         ...newDrink
     }).then(function(data){
         window.location.replace("/addedDrinks"); 
