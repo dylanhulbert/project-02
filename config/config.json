@@ -2,22 +2,31 @@
   "development": {
     "username": "root",
     "password": "Mailey2020",
-    "database": "cocktailDB",
+    "database": "drinkDB",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "timestamps": false
+    }
   },
   "test": {
     "username": "root",
     "password": "Mailey2020",
-    "database": "cocktailDB",
+    "database": "drinkDB",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "timestamps": false
+    }
   },
   "production": {
     "username": "root",
     "password": "Mailey2020",
-    "database": "cocktailDB",
+    "database": "drinkDB",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "timestamps": false
+    }
   }
 }

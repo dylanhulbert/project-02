@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var addDrinkForm = $("form.addDrink");
+    var addDrinkForm = $("form#addDrink");
     var drinkName = $("input#drinkName-input")
     var ingOneInput = $("input#ingOne-input");
     var ingOneOzInput = $("input#ingOneOz-input");
@@ -27,6 +27,7 @@ var newDrink = {
     ingFourOz: ingFourOzInput.val().trim(),
     drinkNotes: notesInput.val().trim()
 }; 
+
 createDrink(newDrink); 
     drinkName.val("")
     ingOneInput.val("");  
@@ -36,16 +37,22 @@ createDrink(newDrink);
     ingThreeInput.val("");  
     ingThreeOzInput.val("");  
     ingFourInput.val("");  
-    ngFourOzInput.val(""); 
+    ingFourOzInput.val(""); 
     notesInput.val(""); 
+    
 });
+
 
 function createDrink(newDrink){
     $.post("/api/drinks", {
         ...newDrink
-    }).then(function(data){
-        window.location.replace("/addedDrinks"); 
-    }).catch(err); 
+      
+    }).then(function(newDrink){
+        console.log("This is your new drink" +  newDrink)
+        window.location.replace(`addedDrinks.html?id=${newDrink.id}`); 
+    }).catch(function(err){
+        if (err) throw err; 
+    }); 
 }
 
 }); 

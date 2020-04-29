@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS drinkDB;
 CREATE DATABASE drinkDB; 
 USE drinkDB; 
 

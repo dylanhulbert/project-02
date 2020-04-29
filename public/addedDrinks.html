@@ -13,7 +13,7 @@
 
 <body>
 
-  <!-- Menu - Would like to get the lines removed... have the links floating -->
+  <!-- Menu -->
 
   <div class="ui fixed menu">
     <div class="ui container">
@@ -23,20 +23,22 @@
     </div>
   </div>
 
-  <!-- Search block -->
+  <!-- Connfirmation the drink has been added -->
 
   <div class="ui main text container">
     <div class="center aligned">
-      <img class="ui centered medium image" src="assets/img/cocktail_home.png" />
-      <div class="hugeText">Cocktails</div>
-      <div class="ui fluid action input huge">
-        <input type="text" placeholder="Find a cocktail...">
-        <div class="ui button basic" id="drinkSearch">Search</div>
+      <div class="title">Your Drink Has Been Added</div>
+      <div class="eight wide column">
+        <table class="results" id= "results">
+          <h3 class="ui header theFont">Your New Drink:</h3>
+          <!--Data will go here-->
+        </table>
       </div>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./js/home.js"></script>
+  <script src="./js/addedDrink.js"></script>
 </body>
 
 </html>
