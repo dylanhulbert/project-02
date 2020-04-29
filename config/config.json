@@ -1,7 +1,7 @@
 {
-  "development": {
+  "lauren-dev": {
     "username": "root",
-    "password": "password",
+    "password": "Mailey2020",
     "database": "drinkDB",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -9,7 +9,7 @@
       "timestamps": false
     }
   },
-  "test": {
+  "dylan-dev": {
     "username": "root",
     "password": "password",
     "database": "drinkDB",

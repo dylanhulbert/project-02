@@ -1,6 +1,12 @@
-# Project-2 
+# Project-02
+Explore Cocktails
 
-Tester
+XXXX
 
-commit
+Here is a link to our project presentation:
+https://dyhu.co/team-pro-02
 
+Here is a link to our application: 
+https://team-project-02.herokuapp.com/
+
+![](./public/assets/img/cocktails.png)
