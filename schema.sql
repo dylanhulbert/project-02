@@ -13,7 +13,7 @@ ingThree VARCHAR(200),
 ingThreeOz VARCHAR(4),
 ingFour VARCHAR(200),
 ingFourOz VARCHAR(4),
-notes VARCHAR(1000),
+drinkNotes VARCHAR(1000),
 PRIMARY KEY(id)
 ); 
 
