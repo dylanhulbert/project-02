@@ -16,5 +16,3 @@ ingFourOz VARCHAR(4),
 notes VARCHAR(1000),
 PRIMARY KEY(id)
 ); 
-
-SELECT * FROM drink

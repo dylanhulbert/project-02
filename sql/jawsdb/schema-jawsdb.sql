@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS drinkDB;
-CREATE DATABASE drinkDB; 
-USE drinkDB; 
+DROP DATABASE IF EXISTS izh8x0hzaw3uwowa;
+CREATE DATABASE izh8x0hzaw3uwowa; 
+USE izh8x0hzaw3uwowa; 
 
 CREATE TABLE drink (
 id INT AUTO_INCREMENT, 
@@ -16,5 +16,3 @@ ingFourOz VARCHAR(4),
 notes VARCHAR(1000),
 PRIMARY KEY(id)
 ); 
-
-SELECT * FROM drink
