@@ -13,20 +13,20 @@ $(document).ready(function () {
         }).then(function(data) {
         console.log(data);
         var newTr = $("<tr>");
-        newTr.append("<td>" + data.drinkName + "</td>");
-        newTr.append("<td>" + "1. " + data.ingOneOz + "oz " + "of" + data.ingOne + "</td>");
+        newTr.append(data.drinkName);
+        newTr.append("<br>" + data.ingOneOz + " oz " + "of " + data.ingOne);
 
-        if (!data.ingTwoOz && !data.ingTwo) {
-            newTr.append("<td>" + "2. " + data.ingTwoOz + "oz " + "of" + data.ingTwo + "</td>");
+        if (data.ingTwoOz && data.ingTwo) {
+            newTr.append("<br>" + data.ingTwoOz + " oz " + "of " + data.ingTwo);
         }
-        if (!data.ingThreeOz && !data.ingThree) {
-            newTr.append("<td>" + "3. " + data.ingThreeOz + "oz " + "of" + data.ingThree + "</td>");
+        if (data.ingThreeOz && data.ingThree) {
+            newTr.append("<br>" + "3. " + data.ingThreeOz + " oz " + "of " + data.ingThree);
         }
-        if (!data.ingFourOz && !data.ingFour) {
-            newTr.append("<td>" + "4. " + data.ingFourOz + "oz " + "of" + data.ingFour + "</td>");
+        if (data.ingFourOz && data.ingFour) {
+            newTr.append("<br>" + "4. " + data.ingFourOz + " oz " + "of " + data.ingFour);
         }
-        if (!data.drinkNotes) {
-            newTr.append("<td>" + "Notes: " + data.drinkNotes + "</td>");
+        if (data.drinkNotes) {
+            newTr.append("<br>" + data.drinkNotes);
         }
         console.log(newTr)
         $("#results").append(newTr); 

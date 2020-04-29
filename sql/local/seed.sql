@@ -1,6 +1,6 @@
 USE drinkDB;
 
-INSERT INTO drink (drinkName, ingOne, ingOneOz, ingTwo, ingTwoOz, ingThree, ingThreeOz, ingFour, ingFourOz, notes) VALUES 
+INSERT INTO drink (drinkName, ingOne, ingOneOz, ingTwo, ingTwoOz, ingThree, ingThreeOz, ingFour, ingFourOz, drinkNotes) VALUES 
 ("Vodka Soda", "Vodka", "3", "Club Soda", "7", "Lime", "1", "", "", "Serve on ice"),
 ("Mojito", "Rum", "3", "Lime Juice", "1", "Soda water", "4", "Mint", "1", "Serve fresh"),
 ("Dry Martini", "Gin", "2", "Dry Vermouth", "1", "Olive", "1", "", "", "Delicious Classic"),
