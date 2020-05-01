@@ -1,6 +1,6 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
-
+const { Op } = require("sequelize");
 
 module.exports = function(app) {
 
@@ -29,6 +29,30 @@ module.exports = function(app) {
       res.json(dbDrink); 
     }); 
   });
+
+  app.get("/api/:searchedDrink", function(req, res) {
+    // Find one Author with the id in req.params.id and return them to the user with res.json
+   console.log(req.params.searchedDrink)
+    db.drink.findAll({
+      where: {
+      [Op.or]: [
+        {drinkName: req.params.searchedDrink},
+       {ingOne: req.params.searchedDrink}
+      ]
+        
+          
+       
+      }
+     
+    }).then(function(dbSearch) {
+      console.log(dbSearch)
+      res.json(dbSearch);
+    });
+  });
+
+
+
+
   app.get("/api/drinks/:id", function(req, res) {
     db.drink.findOne({
       where: {

@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
 
-
-    function displayNewDrink() {
+function displayNewDrink() {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const id = urlParams.get('id')
@@ -32,6 +31,7 @@ $(document).ready(function () {
         $("#results").append(newTr); 
     }); 
     }
+    
 
 displayNewDrink(); 
 

@@ -26,14 +26,28 @@
     <div class="ui main text container">
       <div class="center aligned">
         <div class="title">Drink Search Results</div>
-          <div class="searched resultFont padded" id= "searched">
+          <table class="searched resultFont padded" id= "searched">
             <!--Data will go here-->
-          </div>
+          </table>
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/home.js"></script>
     <script src="./js/addedDrink.js"></script>
+    <script src="./js/drinkSearch.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const searchedDrink = urlParams.get("search")
+      console.log(searchedDrink)
+      $.get("/api/" + searchedDrink, function(result){
+        console.log(result)
+        
+        renderDrink(result)
+        });  
+    })
+    </script>
   </body>
 </html>
