@@ -1,0 +1,18 @@
+DROP DATABASE IF EXISTS izh8x0hzaw3uwowa;
+CREATE DATABASE izh8x0hzaw3uwowa; 
+USE izh8x0hzaw3uwowa; 
+
+CREATE TABLE drink (
+id INT AUTO_INCREMENT, 
+drinkName VARCHAR(200) NOT NULL, 
+ingOne VARCHAR(200) NOT NULL,
+ingOneOz VARCHAR(4) NOT NULL,
+ingTwo VARCHAR(200), 
+ingTwoOz VARCHAR(4), 
+ingThree VARCHAR(200),
+ingThreeOz VARCHAR(4),
+ingFour VARCHAR(200),
+ingFourOz VARCHAR(4),
+drinkNotes VARCHAR(1000),
+PRIMARY KEY(id)
+); 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Cocktails</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Menu -->
+
+  <div class="ui fixed menu">
+    <div class="ui container">
+      <a class="item theFont header" id="homePage">Explore Cocktails</a>
+      <a class="item theFont right aligned" id="recentSearch">Recent Drinks</a>
+      <a class="item theFont" id="addDrink">Add a Drink</a>
+    </div>
+  </div>
+
+
+  <!-- Add a Drink Inputs -->
+
+  <div class="ui main text container">
+    <div class="center aligned">
+      <div class="title">Add A Drink</div>
+      <form class="ui form ui huge" id="addDrink">
+        <div class="field">
+          <div class="fields">
+            <div class="sixteen wide field">
+              <input type="text" name="#" id= "drinkName-input" placeholder="Drink Name">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="fields">
+            <div class="twelve wide field">
+              <input type="text" id= "ingOne-input" name="#" placeholder="Ingredient">
+            </div>
+            <div class="four wide field">
+              <input type="text" id= "ingOneOz-input"name="#" placeholder="Oz">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="fields">
+            <div class="twelve wide field">
+              <input type="text" id="ingTwo-input"name="#" placeholder="Ingredient">
+            </div>
+            <div class="four wide field">
+              <input type="text" id="ingTwoOz-input"name="#" placeholder="Oz">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="fields">
+            <div class="twelve wide field">
+              <input type="text" id="ingThree-input"name="#" placeholder="Ingredient">
+            </div>
+            <div class="four wide field">
+              <input type="text" id="ingThreeOz-input" name="#" placeholder="Oz">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="fields">
+            <div class="twelve wide field">
+              <input type="text" id="ingFour-input" name="#" placeholder="Ingredient">
+            </div>
+            <div class="four wide field">
+              <input type="text" id="ingFourOz-input" name="#" placeholder="Oz">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type= "text" id="notes-input" name="#" placeholder="Notes..."></input>
+        </div>
+
+        <button class="fluid ui huge basic button" type="submit" name="#">Add your Drink</button>
+        </form>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/home.js"></script>
+  <script src="./js/addDrink.js"></script>
+</body>
+
+</html>

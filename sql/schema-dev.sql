@@ -2,17 +2,19 @@ DROP DATABASE IF EXISTS drinkDB;
 CREATE DATABASE drinkDB; 
 USE drinkDB; 
 
-CREATE TABLE drinks (
+CREATE TABLE drink (
 id INT AUTO_INCREMENT, 
 drinkName VARCHAR(200) NOT NULL, 
 ingOne VARCHAR(200) NOT NULL,
-ingOneOz DECIMAL (4,2) NOT NULL, 
+ingOneOz VARCHAR(4) NOT NULL,
 ingTwo VARCHAR(200), 
-ingTwoOz DECIMAL (4,2), 
+ingTwoOz VARCHAR(4), 
 ingThree VARCHAR(200),
-ingThreeOz DECIMAL (4,2),
+ingThreeOz VARCHAR(4),
 ingFour VARCHAR(200),
-ingFourOz DECIMAL (4,2), 
-notes VARCHAR(1000),  
+ingFourOz VARCHAR(4),
+drinkNotes VARCHAR(1000),
 PRIMARY KEY(id)
 ); 
+
+SELECT * FROM drink

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Cocktails</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Menu - Would like to get the lines removed... have the links floating -->
+
+  <div class="ui fixed menu">
+    <div class="ui container">
+      <a class="item theFont header" id="homePage">Explore Cocktails</a>
+      <a class="item theFont right aligned" id="recentSearch">Recent Drinks</a>
+      <a class="item theFont" id="addDrink">Add a Drink</a>
+    </div>
+  </div>
+
+  <!-- Search block -->
+
+  <div class="ui main text container">
+    <div class="center aligned">
+      <img class="ui centered medium image" src="assets/img/cocktail_home.png" />
+      <div class="hugeText">Cocktails</div>
+      <div class="ui fluid action input huge">
+        <input type="text" placeholder="Find a cocktail...">
+        <div class="ui button basic" id="drinkSearch">Search</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/home.js"></script>
+</body>
+
+</html>

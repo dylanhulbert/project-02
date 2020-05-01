@@ -15,29 +15,25 @@
 
     <div class="ui fixed menu">
       <div class="ui container">
-        <a class="item theFont header" href="#">Explore Cocktails</a>
-        <a class="item theFont right aligned" href="#">Recent Drinks</a>
-        <a class="item theFont" href="#">Add a Drink</a>
+        <a class="item theFont header" id="homePage">Explore Cocktails</a>
+        <a class="item theFont right aligned" id="recentSearch">Recent Drinks</a>
+        <a class="item theFont" id="addDrink">Add a Drink</a>
       </div>
     </div>
 
-    <!-- Connfirmation the drink has been added -->
+    <!-- Search Results -->
 
     <div class="ui main text container">
       <div class="center aligned">
-          <div class="title">Your Drink Has Been Added</div>
-            <div class="eight wide column">
-              <div class="results">
-                <h3 class="ui header theFont">RESULT ID#1</h3>
-                </p>ROW #1 ID#1</p>
-                </p>ROW #2 ID#1</p>
-                </p>ROW #3 ID#1</p>
-                </p>ROW #4 ID#1</p>
-                </p>NOTE #5 ID#1</p>
-              </div>
-            </div>
+        <div class="title">Drink Search Results</div>
+          <div class="searched resultFont padded" id= "searched">
+            <!--Data will go here-->
+          </div>
       </div>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/addedDrink.js"></script>
   </body>
 </html>

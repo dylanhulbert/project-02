@@ -11,20 +11,20 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     ingOneOz: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.STRING,
       allowNull: false,
     }, 
     ingTwo: {
       type: DataTypes.STRING
     }, 
     ingTwoOz: {
-      type: DataTypes.DECIMAL
+      type: DataTypes.STRING
     }, 
     ingThree: {
       type: DataTypes.STRING
     }, 
     ingThreeOz: {
-      type: DataTypes.DECIMAL
+      type: DataTypes.STRING
     }, 
     ingFour: {
       type: DataTypes.STRING
@@ -37,7 +37,7 @@ module.exports = function(sequelize, DataTypes) {
     }},
     {
     freezeTableName: true 
-    },
+    }
   );
  
  

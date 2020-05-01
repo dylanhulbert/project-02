@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   app.post("/api/drinks", function(req, res) {
-    console.log(req.body);
+    
     db.drink.create({
     drinkName: req.body.drinkName, 
     ingOne: req.body.ingOne, 
@@ -19,12 +19,22 @@ module.exports = function(app) {
     drinkNotes: req.body.drinkNotes
     }).then(function(dbDrink) {
       res.json(dbDrink);
+      console.log(dbDrink)
     });
   });
 
 
   app.get("/api/drinks", function(req, res) {
     db.drink.findAll({}).then(function(dbDrink){
+      res.json(dbDrink); 
+    }); 
+  });
+  app.get("/api/drinks/:id", function(req, res) {
+    db.drink.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbDrink){
       res.json(dbDrink); 
     }); 
   });
