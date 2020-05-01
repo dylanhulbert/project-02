@@ -35,7 +35,7 @@ function renderDrink(result){
         if (data.drinkNotes) {
             newTr.append("<br>" + data.drinkNotes);
         }
-        $("#searched").append(newTr); 
+        $("#searched").append(<"<br>" + "<br>" + newTr); 
     })
 
     
