@@ -6,10 +6,10 @@ var addDrink = $("#addDrink");
 var homePage = $("#homePage"); 
 
 
-drinkSearch.click(function(event){
-event.preventDefault(); 
-window.location.href = 'results.html'; 
-}); 
+// drinkSearch.click(function(event){
+// event.preventDefault(); 
+// window.location.href = 'results.html'; 
+// }); 
 
 recentSearch.click(function(event){
 event.preventDefault(); 
