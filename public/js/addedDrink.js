@@ -19,10 +19,10 @@ function displayNewDrink() {
             newTr.append("<br>" + data.ingTwoOz + " oz " + "of " + data.ingTwo);
         }
         if (data.ingThreeOz && data.ingThree) {
-            newTr.append("<br>" + "3. " + data.ingThreeOz + " oz " + "of " + data.ingThree);
+            newTr.append("<br>" +  data.ingThreeOz + " oz " + "of " + data.ingThree);
         }
         if (data.ingFourOz && data.ingFour) {
-            newTr.append("<br>" + "4. " + data.ingFourOz + " oz " + "of " + data.ingFour);
+            newTr.append("<br>" +  data.ingFourOz + " oz " + "of " + data.ingFour);
         }
         if (data.drinkNotes) {
             newTr.append("<br>" + data.drinkNotes);
