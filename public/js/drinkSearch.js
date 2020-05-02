@@ -10,11 +10,6 @@ var searchedDrink = $("#drinkSearch").val().trim();
 window.location.href = `results.html?search=${searchedDrink}`
 }); 
 
-// $.get("/api/" + searchedDrink, function(result){
-// console.log(result)
-
-// renderDrink(result)
-// });  
 
 
 function renderDrink(result){

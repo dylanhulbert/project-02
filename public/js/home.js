@@ -6,15 +6,6 @@ var addDrink = $("#addDrink");
 var homePage = $("#homePage"); 
 
 
-// drinkSearch.click(function(event){
-// event.preventDefault(); 
-// window.location.href = 'results.html'; 
-// }); 
-
-// recentSearch.click(function(event){
-// event.preventDefault(); 
-// window.location.href = 'recent.html'; 
-// }); 
 
 addDrink.click(function(event){
  event.preventDefault(); 
