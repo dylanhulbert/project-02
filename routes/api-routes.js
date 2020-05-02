@@ -1,14 +1,11 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 const { Op } = require("sequelize");
-
 module.exports = function(app) {
-
   app.post("/api/drinks", function(req, res) {
-    
     db.drink.create({
-    drinkName: req.body.drinkName, 
-    ingOne: req.body.ingOne, 
+    drinkName: req.body.drinkName,
+    ingOne: req.body.ingOne,
     ingOneOz: req.body.ingOneOz,
     ingTwo: req.body.ingTwo,
     ingTwoOz: req.body.ingTwoOz,
@@ -22,12 +19,10 @@ module.exports = function(app) {
       console.log(dbDrink)
     });
   });
-
-
   app.get("/api/drinks", function(req, res) {
     db.drink.findAll({}).then(function(dbDrink){
-      res.json(dbDrink); 
-    }); 
+      res.json(dbDrink);
+    });
   });
 
   app.get("/api/recentlyAdded", function(req,res){
@@ -36,8 +31,10 @@ module.exports = function(app) {
       order: [ [ 'id', 'DESC' ]]
     }).then(function(entries){
      res.json(entries)
+
     }); 
     }); 
+
 
 
   app.get("/api/:searchedDrink", function(req, res) {
@@ -48,15 +45,12 @@ module.exports = function(app) {
         {drinkName: req.params.searchedDrink},
        {ingOne: req.params.searchedDrink}
       ]
-        
-          
-       
       }
-     
     }).then(function(dbSearch) {
       console.log(dbSearch)
       res.json(dbSearch);
     });
+
   });
 
 
@@ -108,3 +102,6 @@ module.exports = function(app) {
 
  
 };
+
+  });
+

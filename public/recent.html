@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +9,8 @@
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
   <!-- Menu -->
-
   <div class="ui fixed menu">
     <div class="ui container">
       <a class="item theFont header" id="homePage">Explore Cocktails</a>
@@ -22,9 +18,7 @@
       <a class="item theFont" id="recentAdd">Recently Added</a>
     </div>
   </div>
-
   <!-- Recent Searches - Query top 5 serches -->
-
   <div class="ui main text container">
     <div class="center aligned">
       <div class="title">Recently Added Drinks</div>
@@ -33,13 +27,13 @@
         </div>
     </div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./js/home.js"></script>
   <script src="./js/addedDrink.js"></script>
   <script src ="./js/recentSearch.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
+
     
      
     $.get("/api/recentlyAdded", function(result){
@@ -48,8 +42,8 @@
       
       
       });  
+
   })
 </script>
 </body>
-
 </html>
