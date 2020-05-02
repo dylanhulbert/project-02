@@ -22,15 +22,15 @@
   <div class="ui main text container">
     <div class="center aligned">
       <div class="title">Recently Added Drinks</div>
-        <div class="recent resultFont padded" id= "recent">
+        <table class="resultFont padded" id= "recentAddDrink">
           <!--Data will go here-->
-        </div>
+        </table>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./js/home.js"></script>
-  <script src="./js/addedDrink.js"></script>
-  <script src ="./js/recentSearch.js"></script>
+  <!-- <script src="./js/addedDrink.js"></script>
+  <script src ="./js/recentSearch.js"></script> -->
   <script type="text/javascript">
   $(document).ready(function(){
 
@@ -38,10 +38,38 @@
      
     $.get("/api/recentlyAdded", function(result){
       
-      console.log(result)
+    console.log(result)
+
+    renderRecentDrink(result)
       
       
       });  
+
+    function renderRecentDrink(result){
+    result.forEach(function(data){
+        var newTr = $("<tr>");
+        newTr.append(data.drinkName);
+        newTr.append("<br>" + data.ingOneOz + " oz " + "of " + data.ingOne);
+
+        if (data.ingTwoOz && data.ingTwo) {
+            newTr.append("<br>" + data.ingTwoOz + " oz " + "of " + data.ingTwo);
+        }
+        if (data.ingThreeOz && data.ingThree) {
+            newTr.append("<br>" + data.ingThreeOz + " oz " + "of " + data.ingThree);
+        }
+        if (data.ingFourOz && data.ingFour) {
+            newTr.append("<br>" + data.ingFourOz + " oz " + "of " + data.ingFour);
+        }
+        if (data.drinkNotes) {
+            newTr.append("<br>" + data.drinkNotes);
+        }
+        $("#recentAddDrink").append(newTr); 
+    })
+
+    
+
+}; 
+
 
   })
 </script>
