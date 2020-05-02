@@ -1,7 +1,12 @@
-$(document).ready(function(){
+var recentDrink = $("button#recentAdd"); 
 
-    $.get("/api/recentSearches").then(function(data) {
-       
-      });
-    
+
+recentDrink.on("click", function(event){
+  event.preventDefault(); 
+  window.location.href="recent.html"; 
+//  for (i=0; i < newDrink.length; i++){
+//    console.log(newDrink.length); 
+//  }
 })
+   
+    

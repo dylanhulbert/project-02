@@ -30,6 +30,32 @@ module.exports = function(app) {
     }); 
   });
 
+  app.get("/api/recentlyAdded", function(req,res){
+    //   db.drink.findAll({
+    //     attributes: [sequelize.fn("max", sequelize.col('id'))],
+    //     group: ["id"]
+    // }).then(function(maxIds){
+    //     return db.drink.findAll({
+    //         where: {
+    //             id: {
+    //                 [Op.in]: maxIds
+    //             }
+    //         }
+    //     })
+    // }).then(function(result){
+    //     return Promise.resolve(result);
+    // });
+  
+    db.drink.findAll({
+      limit: 5,
+      order: [ [ 'id', 'DESC' ]]
+    }).then(function(entries){
+      //only difference is that you get users list limited to 1
+     res.json(entries)
+    }); 
+    }); 
+
+
   app.get("/api/:searchedDrink", function(req, res) {
     // Find one Author with the id in req.params.id and return them to the user with res.json
    console.log(req.params.searchedDrink)
@@ -52,6 +78,9 @@ module.exports = function(app) {
 
 
 
+  
+
+   
 
   app.get("/api/drinks/:id", function(req, res) {
     db.drink.findOne({

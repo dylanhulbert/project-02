@@ -11,10 +11,10 @@ var homePage = $("#homePage");
 // window.location.href = 'results.html'; 
 // }); 
 
-recentSearch.click(function(event){
-event.preventDefault(); 
-window.location.href = 'recent.html'; 
-}); 
+// recentSearch.click(function(event){
+// event.preventDefault(); 
+// window.location.href = 'recent.html'; 
+// }); 
 
 addDrink.click(function(event){
  event.preventDefault(); 
