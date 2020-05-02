@@ -29,12 +29,13 @@
           <table class="searched resultFont padded" id= "searched">
             <!--Data will go here-->
           </table>
+          <table class="searched resultFont padded" id="empty"></table>
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/home.js"></script>
-    <script src="./js/addedDrink.js"></script>
+    <!-- <script src="./js/addedDrink.js"></script> -->
     <script src="./js/drinkSearch.js"></script>
     <script src="./js/recentSearch.js"></script>
     <script type="text/javascript">
@@ -46,7 +47,13 @@
       $.get("/api/" + searchedDrink, function(result){
         console.log(result)
         
+   
         renderDrink(result)
+     
+      if (result.length === 0){
+            $("#empty").append("<p>" + "Sorry that drink doesn't exist in the database. But you can " + `<a href="add-drink.html" style= "color:green">` +"add one " +`</a>`+ "!" + "</p>"); 
+          }
+      
         }); 
          
     })

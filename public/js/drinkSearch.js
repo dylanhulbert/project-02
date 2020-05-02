@@ -13,6 +13,7 @@ window.location.href = `results.html?search=${searchedDrink}`
 
 
 function renderDrink(result){
+  
     result.forEach(function(data){
         var newTr = $("<tr>");
         newTr.append(data.drinkName);
@@ -29,12 +30,12 @@ function renderDrink(result){
         }
         if (data.drinkNotes) {
             newTr.append("<br>" + data.drinkNotes);
-        }
+        } 
+       
         newTr.append("<br><br>")
         $("#searched").append(newTr); 
     })
 
-    
-
 }; 
+
 
