@@ -30,6 +30,7 @@ function renderDrink(result){
         if (data.drinkNotes) {
             newTr.append("<br>" + data.drinkNotes);
         }
+        newTr.append("<br><br>")
         $("#searched").append(newTr); 
     })
 
