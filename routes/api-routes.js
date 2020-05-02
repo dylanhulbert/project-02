@@ -24,14 +24,19 @@ module.exports = function(app) {
       res.json(dbDrink);
     });
   });
+
   app.get("/api/recentlyAdded", function(req,res){
     db.drink.findAll({
       limit: 5,
       order: [ [ 'id', 'DESC' ]]
     }).then(function(entries){
      res.json(entries)
-    });
-    });
+
+    }); 
+    }); 
+
+
+
   app.get("/api/:searchedDrink", function(req, res) {
    console.log(req.params.searchedDrink)
     db.drink.findAll({
@@ -45,4 +50,58 @@ module.exports = function(app) {
       console.log(dbSearch)
       res.json(dbSearch);
     });
+
   });
+
+
+
+  
+
+   
+
+  app.get("/api/drinks/:id", function(req, res) {
+    db.drink.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbDrink){
+      res.json(dbDrink); 
+    }); 
+  });
+
+  app.delete("/api/drinks/:id", function(req, res) {
+    db.drink.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbDrink) {
+      res.json(dbDrink);
+    });
+
+  });
+  app.put("/api/drinks", function(req, res) {
+    db.drink.update({
+      drinkName: req.body.drinkName, 
+      ingOne: req.body.ingOne, 
+      ingOneOz: req.body.ingOneOz,
+      ingTwo: req.body.ingTwo,
+      ingTwoOz: req.body.ingTwoOz,
+      ingThree: req.body.ingThree,
+      ingThreeOz: req.body.ingThreeOz,
+      ingFour: req.body.ingFour,
+      ingFourOz: req.body.ingFourOz,
+      drinkNotes: req.body.drinkNotes
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbDrink) {
+      res.json(dbDrink);
+    });
+  });
+
+ 
+};
+
+  });
+
